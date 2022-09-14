@@ -1,0 +1,120 @@
+
+  
+  html, body {
+    font-family: 'Source Sans Pro', sans-serif;
+    height: fit-content;
+    position: relative;
+  }
+  
+  .neon_text {
+ 
+    margin: 0 auto;
+    width: 100vw;
+    position: absolute;
+    color: #fff;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px rgb(255, 0, 0),
+      0 0 82px rgb(255, 0, 0),
+      0 0 92px rgb(255, 0, 0),
+      0 0 102px rgb(255, 0, 0),
+      0 0 151px rgb(255, 0, 0);
+  }
+
+  .home_video {
+    width: 100vw;
+    height: 100vh;
+    position:fixed;
+    justify-content: center;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    opacity: 1;
+   }
+  
+  /* Main */
+  .main {
+    color: #fff;
+    position: relative;
+    top: 100px;
+    text-align: center;
+  }
+  
+  .main h1 .efeito{
+    animation: flicker 1.5s infinite alternate;
+    margin-right: 0.3em;
+  }
+
+  .main h1, p{
+    font-size: 80px;
+    font-weight: 300;
+    animation: pulsate 0.3s ease-in-out infinite alternate;    
+    display: flex;
+    justify-content: center;
+  }
+
+  
+  .main p {
+    font-size: 30px;
+  }
+  
+  @media screen and (max-width: 800px) {
+      body {
+          background-size: auto 100%;
+      }
+      .container {
+          width: 100%;
+      }
+  }
+
+  @keyframes pulsate {
+    100% {
+      /* Larger blur radius */
+      text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px rgba(255, 0, 0, 0.76),
+        0 0 80px rgb(255, 94, 0),
+        0 0 90px rgba(255, 0, 0, 0.76),
+        0 0 100px rgb(255, 0, 0),
+        0 0 150px rgba(255, 0, 0, 0.76);
+    }
+   0% {
+      /* A slightly smaller blur radius */
+      text-shadow:
+        0 0 4px #fff,
+        0 0 10px #fff,
+        0 0 18px #fff,
+        0 0 38px rgba(255, 0, 0, 0.76),
+        0 0 73px rgb(255, 94, 0),
+        0 0 80px rgba(255, 0, 0, 0.76),
+        0 0 94px rgb(255, 0, 0),
+        0 0 140px rgba(255, 0, 0, 0.76);
+    }
+  }
+
+  @keyframes flicker {
+    
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px rgba(255, 0, 0, 0.76),
+        0 0 80px rgb(255, 94, 0),
+        0 0 90px rgba(255, 0, 0, 0.76),
+        0 0 100px rgb(255, 0, 0),
+        0 0 150px rgba(255, 0, 0, 0.76);
+    
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+  }
+  
+  
